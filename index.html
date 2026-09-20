@@ -76,15 +76,15 @@ header{position:fixed;top:0;left:0;right:0;height:84px;background:rgba(255,255,2
 .btn.o{background:transparent;border-color:#fff}.btn.o:hover{background:#fff;color:var(--bd)}
 .btn.w{background:#fff;color:var(--bd);border-color:#fff}.btn.w:hover{background:transparent;color:#fff}
 
-#home{padding:0;height:clamp(560px,100dvh,820px);scroll-margin-top:0}
-.slide{position:absolute;inset:0;background-size:cover;background-position:center;background-color:var(--bd);opacity:0;transform:scale(1.05);transition:opacity 1s,transform 6s;display:flex;align-items:center;padding:100px 8vw 80px;will-change:opacity,transform}
+#home{padding:0;height:100vh;height:100svh;min-height:100vh;min-height:100svh;max-height:100vh;max-height:100svh;scroll-margin-top:0}
+.slide{position:absolute;inset:0;background-size:cover;background-position:center;background-color:var(--bd);opacity:0;transform:scale(1.05);transition:opacity 1s,transform 6s;display:flex;align-items:center;padding:84px 8vw 90px;will-change:opacity,transform}
 .slide.on{opacity:1;transform:scale(1);z-index:1}
 .slide::before{content:"";position:absolute;inset:0;background:linear-gradient(95deg,rgba(0,70,105,.82),rgba(0,140,195,.4) 60%,rgba(0,174,239,.12))}
 .slide>div{position:relative;max-width:680px;color:#fff}
 .slide h1,.slide h2{font-size:clamp(1.7rem,3.8vw,3rem);line-height:1.15;font-weight:700;letter-spacing:-.01em;margin-bottom:18px}
 .slide p{font-size:clamp(.95rem,1.25vw,1.1rem);line-height:1.65;margin-bottom:26px;max-width:540px;color:rgba(255,255,255,.95)}
 .bt{display:flex;gap:12px;flex-wrap:wrap}
-.hc{position:absolute;left:8vw;right:8vw;bottom:34px;z-index:5;display:flex;align-items:center;gap:28px;color:#fff}
+.hc{position:absolute;left:8vw;right:8vw;bottom:24px;z-index:5;display:flex;align-items:center;gap:28px;color:#fff}
 .pg{display:flex;align-items:center;gap:8px;flex:0 0 auto}
 .pg button{position:relative;width:10px;height:10px;padding:0;border:0;border-radius:10px;background:rgba(255,255,255,.5);cursor:pointer;overflow:hidden;transition:width .4s,background .3s}
 .pg button:hover{background:#fff}
@@ -221,10 +221,16 @@ h2{font-size:clamp(1.4rem,2.5vw,2.1rem);font-weight:700;letter-spacing:-.01em;li
  .footer-brand-title .line-1{font-size:0.78rem}
  .footer-brand-title .line-2{font-size:0.7rem}
  section{scroll-margin-top:68px}
- .slide{padding-top:92px}.ar{display:none}
+ 
+ .slide{padding:68px 5vw 76px}
+ .slide h1,.slide h2{font-size:clamp(1.4rem,6.8vw,1.9rem);margin-bottom:12px;line-height:1.2}
+ .slide p{font-size:0.88rem;line-height:1.5;margin-bottom:18px}
+ .hc{bottom:18px;left:5vw;right:5vw}
+ .ar{display:none}
+ 
  .bento{grid-template-columns:1fr;grid-auto-rows:minmax(240px,auto)}
  .sv,.sv:last-child{grid-column:auto}
- .bt .btn{padding:12px 22px}
+ .bt .btn{padding:10px 18px;font-size:0.86rem}
 
  .g4{grid-template-columns:1fr 1fr;gap:12px}
  .st{padding:16px 14px 18px;min-height:140px;justify-content:flex-start}
@@ -245,6 +251,8 @@ h2{font-size:clamp(1.4rem,2.5vw,2.1rem);font-weight:700;letter-spacing:-.01em;li
  .st b{font-size:1.45rem;margin-bottom:8px}
  .st span{font-size:0.75rem}
  .st{padding:14px 12px;min-height:130px}
+ .slide h1,.slide h2{font-size:1.35rem}
+ .slide p{font-size:0.82rem}
 }
 @media(max-height:620px) and (min-width:901px){.ph i{height:50vh}.hd{margin-bottom:18px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.slide,.sv{transition:none}.pg button.on::after{animation:none}}
@@ -440,8 +448,6 @@ h2{font-size:clamp(1.4rem,2.5vw,2.1rem);font-weight:700;letter-spacing:-.01em;li
   var done=false,nums=[].slice.call(document.querySelectorAll('[data-n]'));
   function count(){if(done)return;done=true;nums.forEach(function(e){var n=+e.dataset.n,t0=null;function f(t){t0=t0||t;var p=Math.min((t-t0)/1600,1),v=Math.round(n*(1-Math.pow(1-p,3)));e.textContent=v+e.dataset.s;if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)})}
   new IntersectionObserver(function(en){if(en[0].isIntersecting)count()},{threshold:.4}).observe(document.getElementById('experience'));
-
-  if(location.hash){history.replaceState(null,'',location.pathname+location.search)}
 })();
 </script>
 </body>
