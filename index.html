@@ -117,15 +117,17 @@ h2{font-size:clamp(1.4rem,2.5vw,2.1rem);font-weight:700;letter-spacing:-.01em;li
 .st.d{grid-column:2/4}
 .st.d::before{content:"";position:absolute;right:0;top:0;bottom:0;width:48%;background:radial-gradient(circle,rgba(0,174,239,.4) 2px,transparent 2.6px) 0 0/22px 22px;-webkit-mask-image:linear-gradient(to left,#000,transparent);mask-image:linear-gradient(to left,#000,transparent)}
 
+.br-m{display:none}
+
 #services{background:#fff}
-.bento{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:minmax(300px,auto);gap:16px}
-.sv{grid-column:span 2;position:relative;overflow:hidden;display:flex;align-items:flex-end;background-size:cover;background-position:center;background-color:var(--bd);border-radius:44px 8px 44px 8px;transition:.3s}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:minmax(320px,auto);gap:16px}
+.sv{grid-column:span 2;position:relative;overflow:hidden;display:flex;background-size:cover;background-position:center;background-color:var(--bd);border-radius:44px 8px 44px 8px;transition:.3s}
 .sv:nth-child(even){border-radius:8px 44px 8px 44px}
 .sv:nth-child(n+4){grid-column:span 3}
-.sv::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,100,140,.95),rgba(0,140,190,.25) 70%)}
+.sv::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,100,140,.96),rgba(0,140,190,.3) 70%)}
 .sv:hover{transform:translateY(-5px);box-shadow:var(--sh)}
-.sv .tx{position:relative;padding:26px;color:#fff}
-.sv h3{color:#fff;font-size:1.2rem;line-height:1.3;margin-bottom:8px}
+.sv .tx{position:relative;padding:26px;color:#fff;width:100%;display:flex;flex-direction:column;justify-content:flex-end}
+.sv h3{color:#fff;font-size:1.2rem;line-height:1.28;margin-bottom:10px;min-height:2.8em;display:flex;align-items:flex-end}
 .sv p{color:#f0fbff;font-size:.88rem;line-height:1.55}
 
 .nw{white-space:nowrap;display:inline-block}
@@ -189,6 +191,7 @@ h2{font-size:clamp(1.4rem,2.5vw,2.1rem);font-weight:700;letter-spacing:-.01em;li
  .bento{grid-template-columns:1fr 1fr;grid-auto-rows:minmax(260px,auto)}
  .sv,.sv:nth-child(n+4){grid-column:span 1}
  .sv:last-child{grid-column:1/3}
+ .sv h3{min-height:auto}
 }
 @media(max-width:980px){
  .desktop-nav{display:none}
@@ -231,6 +234,8 @@ h2{font-size:clamp(1.4rem,2.5vw,2.1rem);font-weight:700;letter-spacing:-.01em;li
  .st.a b{font-size:clamp(3.6rem, 13vw, 4.8rem);margin-bottom:10px}
  .st.a span{font-size:0.95rem}
  .st.d{padding:18px 16px;min-height:auto;justify-content:flex-end}
+ 
+ .br-m{display:inline}
  
  .ph i{background-size:124%;background-position:center 65%}
 }
@@ -321,8 +326,7 @@ h2{font-size:clamp(1.4rem,2.5vw,2.1rem);font-weight:700;letter-spacing:-.01em;li
   <div class="st">
     <b data-n="30000" data-s="+">30000+</b>
     <span>
-      <span>Workers</span>
-      <span class="d-b">Were Brought</span>
+      <span>Workers<br class="br-m"> Were Brought</span>
       <span class="d-b">In to Malaysia</span>
     </span>
   </div>
