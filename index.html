@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RR Manpower Solutions | Manpower Supply & Management</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--b:#00AEEF;--bd:#0086b8;--tint:#e8f7fd;--t:#12303d;--m:#5a7583;--line:#cfe6f0;--r:28px 6px 28px 6px;--r2:6px 28px 6px 28px;--sh:0 14px 34px -18px rgba(0,110,150,.35)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16.5px}
+html,body{min-height:100%}
+body{font-family:'Roboto',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;color:var(--t);background:#fff;-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}
+html{scroll-behavior:smooth}
+main{display:block}
+section{position:relative;overflow:hidden;scroll-margin-top:84px;padding:clamp(34px,4.2vw,54px) 6vw;display:flex;flex-direction:column}
+.in{margin:auto 0;width:100%;max-width:1240px;align-self:center}
+header{position:fixed;top:0;left:0;right:0;height:84px;background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(14px) saturate(1.4);backdrop-filter:blur(14px) saturate(1.4);box-shadow:0 4px 24px -12px rgba(0,90,130,.3);z-index:50;display:flex;align-items:center;justify-content:center;gap:clamp(20px,4.5vw,70px);padding:0 4vw}
+header img{height:56px;max-width:50vw;object-fit:contain;display:block}
+.nl{display:flex;gap:4px;align-items:center}
+.nl a:not(.btn){font-weight:500;font-size:.88rem;padding:8px 15px;border-radius:12px 3px 12px 3px;transition:.2s}
+.nl a:not(.btn):hover{background:var(--tint);color:var(--bd)}
+header .btn{padding:9px 22px;font-size:.88rem;margin-left:6px}
+.btn{display:inline-block;background:var(--b);color:#fff;font-weight:700;padding:14px 30px;border-radius:14px 4px 14px 4px;border:2px solid var(--b);transition:.2s}
+.btn:hover{background:#fff;color:var(--bd)}
+.btn.o{background:transparent;border-color:#fff}.btn.o:hover{background:#fff;color:var(--bd)}
+.btn.w{background:#fff;color:var(--bd);border-color:#fff}.btn.w:hover{background:transparent;color:#fff}
+/* hero */
+#home{padding:0;height:clamp(560px,100dvh,820px);scroll-margin-top:0}
+.slide{position:absolute;inset:0;background-size:cover;background-position:center;background-color:var(--bd);opacity:0;transform:scale(1.05);transition:opacity 1s,transform 6s;display:flex;align-items:center;padding:100px 8vw 80px;will-change:opacity,transform}
+.slide.on{opacity:1;transform:scale(1);z-index:1}
+.slide::before{content:"";position:absolute;inset:0;background:linear-gradient(95deg,rgba(0,70,105,.82),rgba(0,140,195,.4) 60%,rgba(0,174,239,.12))}
+.slide>div{position:relative;max-width:680px;color:#fff}
+.slide h1{font-size:clamp(1.7rem,3.8vw,3rem);line-height:1.15;font-weight:700;letter-spacing:-.01em;margin-bottom:18px}
+.slide p{font-size:clamp(.95rem,1.25vw,1.1rem);line-height:1.65;margin-bottom:26px;max-width:540px;color:rgba(255,255,255,.95)}
+.bt{display:flex;gap:12px;flex-wrap:wrap}
+.hc{position:absolute;left:8vw;right:8vw;bottom:30px;z-index:5;display:flex;align-items:flex-end;gap:28px;color:#fff}
+.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;flex:1;max-width:840px}
+.pg button{position:relative;background:none;border:0;border-top:2px solid rgba(255,255,255,.35);padding:14px 4px 0 0;text-align:left;color:rgba(255,255,255,.7);font:inherit;cursor:pointer;transition:color .3s}
+.pg button:hover{color:#fff}
+.pg button::before{content:"";position:absolute;left:0;top:-2px;height:2px;width:100%;background:#fff;transform:scaleX(0);transform-origin:left}
+.pg button.on{color:#fff}
+.pg button.on::before{animation:f 5.5s linear forwards}
+.pg span{display:block;font-size:.8rem;font-weight:500;letter-spacing:.06em;margin-bottom:4px;opacity:.8}
+.pg b{display:block;font-size:.98rem;font-weight:500;line-height:1.3}
+@keyframes f{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.ar{display:flex;gap:8px}
+.ar button{width:48px;height:48px;border-radius:16px 4px 16px 4px;border:1px solid rgba(255,255,255,.7);background:rgba(255,255,255,.14);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#fff;font-size:22px;cursor:pointer;transition:.2s}
+.ar button:hover{background:#fff;color:var(--bd)}
+/* shared */
+.hd{text-align:center;max-width:820px;margin:0 auto 22px}
+.hd::after{content:"";display:block;width:60px;height:4px;border-radius:4px;background:var(--b);margin:16px auto 0}
+h2{font-size:clamp(1.4rem,2.5vw,2.1rem);font-weight:700;letter-spacing:-.01em;line-height:1.18}
+/* stats */
+#experience{background:var(--tint)}
+.g4{display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:repeat(2,minmax(190px,auto));gap:16px}
+.st{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);padding:clamp(22px,2.6vw,34px);display:flex;flex-direction:column;justify-content:flex-end;border-radius:36px 8px 36px 8px;transition:transform .3s,box-shadow .3s}
+.st:nth-child(even){border-radius:8px 36px 8px 36px}
+.st:hover{transform:translateY(-4px);box-shadow:var(--sh)}
+.st>*{position:relative;z-index:1}
+.st b{display:block;font-size:clamp(2.4rem,4vw,3.5rem);font-weight:700;letter-spacing:-.02em;line-height:1;margin-bottom:10px;color:var(--t)}
+.st span{color:var(--m);line-height:1.5;max-width:260px}
+.st.a{grid-row:1/3;background:var(--bd);border-color:var(--bd)}
+.st.a b{font-size:clamp(4.5rem,9vw,8rem);color:#fff;letter-spacing:-.03em;margin-bottom:14px}
+.st.a span{color:#e6f7ff;font-size:1.1rem;max-width:300px}
+.st.a::before,.st.a::after{content:"";position:absolute;border-radius:50%!important;border:solid rgba(255,255,255,.09)}
+.st.a::before{width:340px;height:340px;right:-110px;top:-110px;border-width:40px}
+.st.a::after{width:190px;height:190px;right:40px;top:60px;border-width:22px}
+.st.d{grid-column:2/4}
+.st.d::before{content:"";position:absolute;right:0;top:0;bottom:0;width:48%;background:radial-gradient(circle,rgba(0,174,239,.4) 2px,transparent 2.6px) 0 0/22px 22px;-webkit-mask-image:linear-gradient(to left,#000,transparent);mask-image:linear-gradient(to left,#000,transparent)}
+/* services bento */
+#services{background:#fff}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:minmax(300px,auto);gap:16px}
+.sv{grid-column:span 2;position:relative;overflow:hidden;display:flex;align-items:flex-end;background-size:cover;background-position:center;background-color:var(--bd);border-radius:44px 8px 44px 8px;transition:.3s}
+.sv:nth-child(even){border-radius:8px 44px 8px 44px}
+.sv:nth-child(n+4){grid-column:span 3}
+.sv::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,100,140,.95),rgba(0,140,190,.25) 70%)}
+.sv:hover{transform:translateY(-5px);box-shadow:var(--sh)}
+.sv .tx{position:relative;padding:26px;color:#fff}
+.sv h3{color:#fff;font-size:1.2rem;line-height:1.3;margin-bottom:8px}
+.sv p{color:#f0fbff;font-size:.88rem;line-height:1.55}
+/* ceo */
+#about{background:var(--tint)}
+.ceo{display:grid;grid-template-columns:.9fr 1.2fr;gap:clamp(24px,6vw,80px);align-items:center}
+.ph{position:relative;margin:0 24px 24px 0}
+.ph i{display:block;height:min(50vh,440px);min-height:280px;background-size:cover;background-position:center top;background-color:var(--b);border-radius:60px 8px 60px 8px;position:relative;z-index:1}
+.ph::before{content:"";position:absolute;inset:24px -24px -24px 24px;border-radius:60px 8px 60px 8px;background:var(--b);opacity:.28}
+.ceo h2{margin-bottom:16px}
+.qt{font-size:clamp(.95rem,1.3vw,1.1rem);line-height:1.6;font-weight:500;padding-left:20px;border-left:4px solid var(--b);margin-bottom:16px}
+.ceo p{line-height:1.75;color:var(--m);margin-bottom:10px}
+.sg{margin-top:18px;font-weight:700}.sg small{display:block;color:var(--bd);font-weight:500}
+/* testi */
+#testimonials{background:#fff}
+.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tc{background:var(--tint);padding:clamp(22px,2.6vw,34px);border-radius:var(--r);border-top:4px solid var(--b)}
+.tc:nth-child(2){background:var(--bd);color:#fff;border-radius:var(--r2);border-color:var(--bd)}
+.tc:nth-child(2) q,.tc:nth-child(2) b{color:#fff}.tc:nth-child(2) small{color:#d9f3ff}
+.sr{color:var(--b);letter-spacing:3px;margin-bottom:12px}.tc:nth-child(2) .sr{color:#fff}
+.tc q{display:block;quotes:none;line-height:1.7;margin-bottom:22px}
+.pp{display:flex;align-items:center;gap:12px}
+.pp i{width:46px;height:46px;flex:0 0 46px;border-radius:14px 4px 14px 4px;background:#fff;color:var(--bd);display:grid;place-items:center;font-style:normal;font-weight:700;font-size:.85rem}
+.pp b{display:block}.pp small{color:var(--m)}
+/* footer */
+#contact{background:var(--tint)}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+.fg h4{margin-bottom:12px;color:var(--bd)}
+.fg li a{transition:color .2s}.fg li a:hover{color:var(--bd)}
+.fg li{list-style:none;line-height:1.95;color:var(--m);font-size:.93rem}
+.fg p{color:var(--m);line-height:1.7;font-size:.93rem}
+.fg img{height:46px;margin-bottom:12px}
+.cp{margin-top:26px;padding-top:14px;border-top:1px solid var(--line);font-size:.85rem;text-align:center;color:var(--m)}
+#expertise{background:url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=70') center/cover var(--bd);color:#fff;text-align:center}
+#expertise::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,70,105,.78),rgba(0,110,150,.7))}
+#expertise{padding-top:clamp(64px,8vw,104px);padding-bottom:clamp(64px,8vw,104px)}
+#expertise .in{position:relative;max-width:820px}
+#expertise h2{font-size:clamp(1.6rem,3.4vw,2.6rem);margin-bottom:18px}
+#expertise p{font-size:clamp(.95rem,1.3vw,1.1rem);line-height:1.6;margin-bottom:32px}
+/* responsive */
+@media(max-width:1100px){
+ .bento{grid-template-columns:1fr 1fr;grid-auto-rows:minmax(260px,auto)}
+ .sv,.sv:nth-child(n+4){grid-column:span 1}
+ .sv:last-child{grid-column:1/3}
+}
+@media(max-width:900px){
+ .g4{grid-template-columns:1fr 1fr;grid-template-rows:auto}.st.a,.st.d{grid-column:1/3;grid-row:auto}.st.a{min-height:230px}
+ .ceo,.tg,.fg{grid-template-columns:1fr}
+ .tc:nth-child(2){order:0}
+ .ph{max-width:420px;margin:0 24px 24px 0}.ph i{height:38vh}
+   section{padding-left:5vw;padding-right:5vw}
+ .hc{left:5vw;right:5vw}.slide{padding-left:6vw;padding-right:6vw}
+}
+@media(max-width:640px){
+ header{height:68px;padding:0 3vw;gap:16px}header img{height:46px}.nl.l{display:none}.nl a:not(.btn){display:none}header .btn{padding:8px 16px;font-size:.8rem}
+ section{scroll-margin-top:68px}
+ .slide{padding-top:92px}.pg b{display:none}.pg{gap:10px}.ar{display:none}
+ .bento{grid-template-columns:1fr;grid-auto-rows:minmax(240px,auto)}
+ .sv,.sv:last-child{grid-column:auto}
+ .bt .btn{padding:12px 22px}
+}
+@media(max-width:400px){.g4{grid-template-columns:1fr}.st.a,.st.d{grid-column:auto}}
+@media(max-height:620px) and (min-width:901px){.ph i{height:50vh}.hd{margin-bottom:18px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.slide,.sv{transition:none}.pg button.on::after{animation:none}}
+</style>
+</head>
+<body>
+<header>
+ <nav class="nl l"><a href="#home">Home</a><a href="#services">Services</a><a href="#expertise">Our Expertise</a></nav>
+ <a href="#home"><img src="logo.png" alt="RR Manpower Solutions"></a>
+ <nav class="nl r"><a href="#about">About</a><a href="#testimonials">Testimonials</a><a class="btn" href="#contact">Contact Us</a></nav>
+</header>
+<main id="main">
+
+<section id="home">
+ <div class="slide on" style="background-image:url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1920&q=70')"><div><h1>Reliable Manpower Supply for Your Business</h1><p>We connect industries with skilled, screened and ready-to-work talent, so your operations never slow down.</p><div class="bt"><a class="btn" href="#services">Our Services</a><a class="btn o" href="#contact">Get a Quote</a></div></div></div>
+ <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1920&q=70')"><div><h1>Skilled Workforce, Ready When You Need Them</h1><p>From recruitment to deployment, we handle the full process for manufacturing, construction, plantation and services.</p><div class="bt"><a class="btn" href="#experience">Our Track Record</a><a class="btn o" href="#contact">Get a Quote</a></div></div></div>
+ <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=70')"><div><h1>End-to-End Workforce Management</h1><p>Accommodation, payroll, transportation and compliance managed under one roof by a dedicated team.</p><div class="bt"><a class="btn" href="#services">What We Manage</a><a class="btn o" href="#contact">Get a Quote</a></div></div></div>
+ <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=70')"><div><h1>A Trusted Partner for Over 27 Years</h1><p>Compliance, quality and care for every worker, and a long-term partnership for every client.</p><div class="bt"><a class="btn" href="#contact">Contact Us</a><a class="btn o" href="#about">About Us</a></div></div></div>
+ <div class="hc"><div class="pg" id="pg"><button type="button" aria-label="Slide 01"><span>01</span><b>Manpower Supply</b></button><button type="button" aria-label="Slide 02"><span>02</span><b>Skilled Workforce</b></button><button type="button" aria-label="Slide 03"><span>03</span><b>Full Management</b></button><button type="button" aria-label="Slide 04"><span>04</span><b>Trusted Partner</b></button></div><div class="ar"><button id="pv" aria-label="Previous">&#8249;</button><button id="nx" aria-label="Next">&#8250;</button></div></div>
+</section>
+
+<section id="experience"><div class="in">
+ <div class="hd"><h2>Trusted by industry for decades</h2></div>
+ <div class="g4">
+  <div class="st a"><b data-n="27" data-s="+">27+</b><span>Years of Experience in Manpower Supply Industry</span></div>
+  <div class="st"><b data-n="17" data-s="+">17+</b><span>Years of Experience in Manpower Management</span></div>
+  <div class="st"><b data-n="30000" data-s="+">30000+</b><span>Workers Were Brought In to Malaysia</span></div>
+  <div class="st d"><b data-n="15000" data-s="+">15000+</b><span>Dormitory Berth Accommodation for Workers</span></div>
+ </div>
+</div></section>
+
+<section id="services"><div class="in">
+ <div class="hd"><h2>We Are A Leading Manpower Management Company</h2></div>
+ <div class="bento">
+  <div class="sv" style="background-image:url('https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=900&q=70')"><div class="tx"><h3>Dormitory Management</h3><p>We provide quality, comfortable and satisfactory accommodation in compliance with Responsible Business Alliance (RBA) Standard, as well as Employees' Minimum Standards of Housing, Accommodations and Amenities Act 1990 (Akta 446).</p></div></div>
+  <div class="sv" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=70')"><div class="tx"><h3>Payroll Management</h3><p>Payroll division specialised in workers' wages and salaries management to ensure payroll cheques distribute to each worker in a timely manner.</p></div></div>
+  <div class="sv" style="background-image:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=70')"><div class="tx"><h3>Workforce Management</h3><p>Our professional and dedicated operation personnel specialised in workers management comprise of functional and operational implementation.</p></div></div>
+  <div class="sv" style="background-image:url('https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=70')"><div class="tx"><h3>Transportation &amp; Logistic Management</h3><p>We are committed to provide efficient and effective transportation services to accommodate to our customers' needs in cost-effective ways.</p></div></div>
+  <div class="sv" style="background-image:url('https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&q=70')"><div class="tx"><h3>Compliance to Quality Policy</h3><p>We are committed to provide a high quality and consistent service to our customers by making sure that this quality policy is communicated and understood within the organisation and that it is reviewed for continuing suitability.</p></div></div>
+ </div>
+</div></section>
+
+<section id="expertise"><div class="in">
+ <h2>Need Our Expertise</h2>
+ <p>Reach out to us for a professional consultation to get the right candidates.</p>
+ <a class="btn" href="#contact">Contact Us</a>
+</div></section>
+
+<section id="about"><div class="in">
+ <div class="ceo">
+  <div class="ph"><i style="background-image:url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=70')"></i></div>
+  <div>
+   <h2>Our CEO</h2>
+   <p class="qt">For more than two decades, we have built our name on one promise: to supply the right people, manage them with care and deliver consistently for every client.</p>
+   <p>Our people are our strength. We invest in proper accommodation, timely payroll and full compliance because a well-looked-after workforce is a productive workforce.</p>
+   <p>We look forward to growing together with you.</p>
+   <div class="sg">Name of CEO<small>Chief Executive Officer</small></div>
+  </div>
+ </div>
+</div></section>
+
+<section id="testimonials"><div class="in">
+ <div class="hd"><h2>What Our Customers Are Saying</h2></div>
+ <div class="tg">
+  <div class="tc"><div class="sr">&#9733;&#9733;&#9733;&#9733;&#9733;</div><q>They supplied the workers we needed on schedule, and the follow-up on welfare and payroll has been consistently professional.</q><div class="pp"><i>OM</i><div><b>Operations Manager</b><small>Manufacturing Company</small></div></div></div>
+  <div class="tc"><div class="sr">&#9733;&#9733;&#9733;&#9733;&#9733;</div><q>Compliance was our main worry. Their team handled documentation and accommodation standards so we could focus on production.</q><div class="pp"><i>HR</i><div><b>HR Director</b><small>Electronics Manufacturer</small></div></div></div>
+  <div class="tc"><div class="sr">&#9733;&#9733;&#9733;&#9733;&#9733;</div><q>A dependable long-term partner. Communication is clear, problems are solved quickly and the workforce is well managed.</q><div class="pp"><i>GM</i><div><b>General Manager</b><small>Construction Company</small></div></div></div>
+ </div>
+</div></section>
+
+<section id="contact"><div class="in">
+ <div class="fg">
+  <div><img src="logo.png" alt="Logo"><p>A leading manpower supply and management company committed to quality, compliance and care for every worker.</p></div>
+  <div><h4>Quick Links</h4><ul><li><a href="#home">Home</a></li><li><a href="#services">Services</a></li><li><a href="#expertise">Our Expertise</a></li><li><a href="#about">About</a></li><li><a href="#testimonials">Testimonials</a></li><li><a href="#contact">Contact Us</a></li></ul></div>
+  <div><h4>Contact Us</h4><ul><li>Inquiry Gmail : <a href="mailto:rr@rehobothmanpower.com">rr@rehobothmanpower.com</a></li><li>Career Gmail : <a href="mailto:rehobothr@gmail.com">rehobothr@gmail.com</a></li><li>Phone : <a href="tel:043839566">04-3839 566</a></li></ul></div>
+ </div>
+ <p class="cp">&copy; 2026 Rehoboth Resources Trading &amp; Construction Sdn. Bhd. All rights reserved.</p>
+</div></section>
+
+</main>
+<script>
+(function(){
+ var s=[].slice.call(document.querySelectorAll('.slide')),pg=document.getElementById('pg'),i=0,tm;
+ [].forEach.call(pg.children,function(b,k){b.onclick=function(){go(k)}});
+ function go(n){i=(n+s.length)%s.length;s.forEach(function(e,k){e.classList.toggle('on',k===i)});[].forEach.call(pg.children,function(e,k){e.classList.remove('on');if(k===i){void e.offsetWidth;e.classList.add('on')}});clearInterval(tm);tm=setInterval(function(){go(i+1)},5500)}
+ document.getElementById('pv').onclick=function(){go(i-1)};document.getElementById('nx').onclick=function(){go(i+1)};go(0);
+ var done=false,nums=[].slice.call(document.querySelectorAll('[data-n]'));
+ function count(){if(done)return;done=true;nums.forEach(function(e){var n=+e.dataset.n,t0=null;function f(t){t0=t0||t;var p=Math.min((t-t0)/1600,1),v=Math.round(n*(1-Math.pow(1-p,3)));e.textContent=v+e.dataset.s;if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)})}
+ new IntersectionObserver(function(en){if(en[0].isIntersecting)count()},{threshold:.4}).observe(document.getElementById('experience'));
+if(location.hash){history.replaceState(null,'',location.pathname+location.search)}
+})();
+</script>
+</body>
+</html>
