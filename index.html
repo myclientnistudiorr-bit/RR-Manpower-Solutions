@@ -13,11 +13,13 @@
 <meta name="geo.region" content="MY">
 <link rel="canonical" href="https://rrsbmanpower.com/">
 
-<!-- Favicon & Search Results Icon (list.png) -->
-<link rel="icon" href="https://rrsbmanpower.com/list.png" type="image/png" sizes="192x192">
+<!-- Favicon untuk Tab Browser (logo.png) -->
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="shortcut icon" href="https://rrsbmanpower.com/logo.png" type="image/png">
+
+<!-- Ikon Khusus Hasil Pencarian Google & Perangkat Mobile (list.png 1:1) -->
 <link rel="icon" href="https://rrsbmanpower.com/list.png" type="image/png" sizes="48x48">
-<link rel="icon" href="list.png" type="image/png">
-<link rel="shortcut icon" href="https://rrsbmanpower.com/list.png" type="image/png">
+<link rel="icon" href="https://rrsbmanpower.com/list.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="https://rrsbmanpower.com/list.png">
 
 <!-- Open Graph -->
@@ -35,7 +37,7 @@
 <meta name="twitter:description" content="Rehoboth Resources (M) SDN. BHD. provides professional manpower supply and workforce management in Malaysia, covering dormitory, payroll, transportation, and legal compliance.">
 <meta name="twitter:image" content="https://rrsbmanpower.com/list.png">
 
-<!-- SCHEMA MARKUP UNTUK GOOGLE SEARCH & AI OVERVIEW (KNOWLEDGE GRAPH) -->
+<!-- Schema Markup untuk Google AI Overview & Knowledge Graph -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -232,7 +234,7 @@ header{position:fixed;top:0;left:0;right:0;height:84px;background:rgba(255,255,2
 .mobile-drawer.active{transform:translateX(0)}
 .drawer-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:20px}
 .drawer-head .drawer-logo{height:42px;width:auto;object-fit:contain}
-.drawer-close{background:var(--tint);border:none;width:38px;height:38px;border-radius:50%;color:var(--bd);font-size:24px;line-height:1;cursor:grid;place-items:center;transition:.2s}
+.drawer-close{background:var(--tint);border:none;width:38px;height:38px;border-radius:50%;color:var(--bd);font-size:24px;line-height:1;cursor:pointer;display:grid;place-items:center;transition:.2s}
 .drawer-close:hover{background:var(--b);color:#fff}
 .drawer-links{display:flex;flex-direction:column;gap:8px}
 .drawer-links a:not(.btn){display:block;padding:12px 14px;border-radius:10px;font-weight:500;font-size:.95rem;color:var(--t);transition:.2s}
@@ -812,7 +814,7 @@ h2{font-size:clamp(1.4rem,2.5vw,2.1rem);font-weight:700;letter-spacing:-.01em;li
     });
   }
 
-  /* DETEKSI PERANTI: MOBILE/TABLET BUKA APP GMAIL, DESKTOP BUKA GMAIL WEB */
+  /* DETEKSI PERANGKAT: MOBILE/TABLET BUKA APP GMAIL, DESKTOP BUKA GMAIL WEB */
   var isMobileOrTab = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || 
                       (navigator.maxTouchPoints && navigator.maxTouchPoints > 2);
   
