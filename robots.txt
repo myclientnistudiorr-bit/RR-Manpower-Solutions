@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.rehobothmanpower.com/sitemap.xml
+Sitemap: https://rrsbmanpower.com/sitemap.xml
