@@ -278,12 +278,25 @@ h2{font-size:clamp(1.4rem,2.5vw,2.1rem);font-weight:700;letter-spacing:-.01em;li
 .st b{display:block;font-size:clamp(2.1rem,3.4vw,3.5rem);font-weight:700;letter-spacing:-.02em;line-height:1;margin-bottom:12px;color:var(--t)}
 .st span{color:var(--m);line-height:1.45;display:block}
 .st span.d-b{display:block}
-.st.a{grid-row:1/3;background:var(--bd);border-color:var(--bd)}
+
+/* KAD PERTAMA DENGAN BACKGROUND GAMBAR & OVERLAY */
+.st.a{
+  grid-row:1/3;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  border-color:transparent;
+}
+.st.a::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top, rgba(0, 70, 105, 0.94) 15%, rgba(0, 134, 184, 0.7) 65%, rgba(0, 174, 239, 0.35) 100%);
+  z-index:0;
+}
 .st.a b{font-size:clamp(4.5rem,9vw,8rem);color:#fff;letter-spacing:-.03em;margin-bottom:14px}
 .st.a span{color:#e6f7ff;font-size:1.1rem}
-.st.a::before,.st.a::after{content:"";position:absolute;border-radius:50%!important;border:solid rgba(255,255,255,.09)}
-.st.a::before{width:340px;height:340px;right:-110px;top:-110px;border-width:40px}
-.st.a::after{width:190px;height:190px;right:40px;top:60px;border-width:22px}
+
 .st.d{grid-column:2/4}
 .st.d::before{content:"";position:absolute;right:0;top:0;bottom:0;width:48%;background:radial-gradient(circle,rgba(0,174,239,.4) 2px,transparent 2.6px) 0 0/22px 22px;-webkit-mask-image:linear-gradient(to left,#000,transparent);mask-image:linear-gradient(to left,#000,transparent)}
 
@@ -590,9 +603,10 @@ h2{font-size:clamp(1.4rem,2.5vw,2.1rem);font-weight:700;letter-spacing:-.01em;li
 </section>
 
 <section id="experience"><div class="in">
- <div class="hd"><h2>Trusted by industry for decades</h2></div>
+ <div class="hd"><h2>Trusted by Industries for Decades</h2></div>
  <div class="g4">
-  <div class="st a">
+  <!-- Kad pertama dengan background gambar & corak bulatan dikeluarkan -->
+  <div class="st a" style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=75')">
     <b data-n="27" data-s="+">27+</b>
     <span>
       <span>Years of Experience in</span>
@@ -630,10 +644,10 @@ h2{font-size:clamp(1.4rem,2.5vw,2.1rem);font-weight:700;letter-spacing:-.01em;li
  <div class="hd"><h2>We Are A Leading Manpower Management Company</h2></div>
  <div class="bento">
   <div class="sv" style="background-image:url('https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=900&q=70')"><div class="tx"><h3>Dormitory Management</h3><p>We provide quality, comfortable and satisfactory accommodation in compliance with Responsible Business Alliance (RBA) Standard, as well as Employees' Minimum Standards of Housing, Accommodations and Amenities Act 1990 <span class="nw">(Akta 446).</span></p></div></div>
-  <div class="sv" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=70')"><div class="tx"><h3>Payroll Management</h3><p>Payroll division specialised in workers' wages and salaries management to ensure payroll cheques distribute to each worker in a timely manner.</p></div></div>
-  <div class="sv" style="background-image:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=70')"><div class="tx"><h3>Workforce Management</h3><p>Our professional and dedicated operation personnel specialised in workers management comprise of functional and operational implementation.</p></div></div>
-  <div class="sv" style="background-image:url('https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=70')"><div class="tx"><h3>Transportation &amp; Logistic Management</h3><p>We are committed to provide efficient and effective transportation services to accommodate to our customers' needs in cost-effective ways.</p></div></div>
-  <div class="sv" style="background-image:url('https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&q=70')"><div class="tx"><h3>Compliance to Quality Policy</h3><p>We are committed to provide a high quality and consistent service to our customers by making sure that this quality policy is communicated and understood within the organisation and that it is reviewed for continuing suitability.</p></div></div>
+  <div class="sv" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=70')"><div class="tx"><h3>Payroll Management</h3><p>The Payroll Division specialises in managing workers’ wages and salaries to ensure that payroll cheques are distributed to each worker in a timely manner.</p></div></div>
+  <div class="sv" style="background-image:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=70')"><div class="tx"><h3>Workforce Management</h3><p>Our professional and dedicated operations personnel specialise in workforce management and are responsible for functional and operational implementation.</p></div></div>
+  <div class="sv" style="background-image:url('https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=70')"><div class="tx"><h3>Transportation &amp; Logistics Management</h3><p>We are committed to providing efficient and effective transportation services that meet our customers’ needs in a cost-effective manner.</p></div></div>
+  <div class="sv" style="background-image:url('https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&q=70')"><div class="tx"><h3>Compliance to Quality Policy</h3><p>We are committed to providing high-quality and consistent services to our customers by ensuring that this Quality Policy is communicated and understood throughout the organisation and regularly reviewed for its continuing suitability.</p></div></div>
  </div>
 </div></section>
 
@@ -656,7 +670,7 @@ h2{font-size:clamp(1.4rem,2.5vw,2.1rem);font-weight:700;letter-spacing:-.01em;li
          <span class="num-tag">01</span>
          <h3>Why did we start the company?</h3>
        </div>
-       <p>We started the company to help businesses find the right people for the right roles while making the recruitment process more efficient, reliable, and transparent. We saw that many companies struggle to find suitable candidates quickly, while job seekers struggle to find opportunities that match their skills.</p>
+       <p>We started the company to help businesses find the right people for the right roles while making the recruitment process more efficient, reliable, and transparent. We saw that many companies struggled to find suitable candidates quickly, while job seekers struggled to find opportunities that match their skills.</p>
      </div>
 
      <div class="modern-ceo-card">
